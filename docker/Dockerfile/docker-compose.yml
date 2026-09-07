@@ -1,0 +1,12 @@
+services:
+  talker:
+    build: .
+    container_name: ros2_talker
+    network_mode: host
+    command: ros2 run demo_nodes_cpp talker
+
+  listener:
+    build: .
+    container_name: ros2_listener
+    network_mode: host
+    command: ros2 run demo_nodes_cpp listener
